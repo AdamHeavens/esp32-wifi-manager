@@ -6,14 +6,14 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="stylesheet" href="style.css">
 		<script async src="code.js"></script>
-		<title>esp32-wifi-manager</title>
+		<title>PlugStream WiFi Manager</title>
 	</head>
 	<body>
 		<div id="app">
 			<div id="app-wrap">
 				<div id="wifi">
 					<header>
-						<h1>Wi-Fi</h1>
+						<h1>PlugStream - WiFi Connection</h1>
 					</header>
 					<div id="wifi-status">
 						<h2>Connected to:</h2>
@@ -21,14 +21,27 @@
 							<div class="ape"><div class="w0"><div class="pw"><span></span></div></div></div>
 						</section>
 					</div>
-					<h2>Manual connect</h2>
-					<section id="manual_add">
-					<div class="ape">ADD (HIDDEN) SSID<div>
-					</section>
-					<h2>or choose a network...</h2>
+					
+					<h2>Choose a WiFi Network...</h2>
 					<section id="wifi-list">
 					</section>
-					<div id="pwrdby"><em>Powered by </em><a id="acredits" href="#"><strong>esp32-wifi-manager</strong></a>.</div>
+					<h2>or Manually Connect</h2>
+					<section id="manual_add">
+					<div class="ape">Add a Hidden SSID<div>
+					</section>
+				</div>
+				<div id="connect">
+					<header>
+						<h1>Enter Password</h1>
+					</header>
+					<h2>Password for <span id="ssid-pwd"></span></h2>
+					<section>
+						<input id="pwd" type="password" placeholder="Password" value="">
+					</section>
+					<div class="buttons">
+							<input id="join" type="button" value="Join" />
+							<input id="cancel" type="button" value="Cancel"/>
+					</div>
 				</div>
 				<div id="connect_manual">
 					<header>
@@ -44,19 +57,6 @@
 							<input id="manual_cancel" type="button" value="Cancel"/>
 					</div>
 				</div>
-				<div id="connect">
-					<header>
-						<h1>Enter Password</h1>
-					</header>
-					<h2>Password for <span id="ssid-pwd"></span></h2>
-					<section>
-						<input id="pwd" type="password" placeholder="Password" value="">
-					</section>
-					<div class="buttons">
-							<input id="join" type="button" value="Join" />
-							<input id="cancel" type="button" value="Cancel"/>
-					</div>
-				</div>
 				<div id="connect-wait">
 					<header>
 						<h1>Please wait...</h1>
@@ -65,7 +65,7 @@
 					<section>
 						<div id="loading">
 							<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
-							<p class="tctr">You may lose wifi access while the esp32 recalibrates its radio. Please wait until your device automatically reconnects. This can take up to 30s.</p>
+							<p class="tctr">You may lose WiFi access while PlugStream recalibrates its radio. Please wait until your device automatically reconnects. This can take up to 60s.</p>
 						</div>
 						<div id="connect-success">
 							<h3 class="gr">Success!</h3>
@@ -118,15 +118,7 @@
 			</header>
 			<h2></h2>
 			<section>
-				<p><strong>esp32-wifi-manager</strong>, &copy; 2017-2020, Tony Pottier<br />Licended under the MIT License.</p>
-				<p>
-					This app would not be possible without the following libraries:
-				</p>
-				<ul>
-					<li>SpinKit, &copy;  2015, Tobias Ahlin. Licensed under the MIT License.</li>
-					<li>jQuery, The jQuery Foundation. Licensed under the MIT License.</li>
-					<li>cJSON, &copy; 2009-2017, Dave Gamble and cJSON contributors. Licensed under the MIT License.</li>
-				</ul>
+				<p><strong>PlugStream</strong>, &copy; 2024 Six Watts Ltd<br /></p>
 			</section>
 			<div class="buttons">
 				<input id="ok-credits" type="button" value="OK" class="ctr" />

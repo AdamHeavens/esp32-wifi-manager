@@ -10,7 +10,7 @@ a {
     text-decoration: none
 }
 a:hover {
-    color: red;
+    color: blue;
 }
 input {
     display: none;
@@ -87,8 +87,8 @@ h1 {
     display: block;
     text-align: center;
     margin: 0;
-    padding: 15px;
-    font-size: 1.4em
+    padding: 12px;
+    font-size: 1.0em
 }
 h2 {
     margin: 0;
@@ -96,7 +96,7 @@ h2 {
     padding: 10px;
     text-transform: uppercase;
     color: #888;
-    font-size: 1.0em
+    font-size: 0.8em
 }
 h3 {
     margin: 0;
